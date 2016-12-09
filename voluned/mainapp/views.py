@@ -18,7 +18,7 @@ def index(request):
         </div>
     """
     section_content = ""
-    with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html") as f:
+    with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
         section_content = f.read()
     context = dict()
     context["BASEPATH"] = BASEPATH
