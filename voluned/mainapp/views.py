@@ -18,7 +18,7 @@ def index(request):
             </div>
         </div>
     """
-    section_content = get_template("inicio.html")
+    section_content = get_template("mainapp/inicio.html")
     #with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
     #    section_content = f.read()
     context = dict()
