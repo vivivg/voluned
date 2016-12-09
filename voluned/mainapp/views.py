@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.template.loader import get_template
 import os
 
 
@@ -17,9 +18,9 @@ def index(request):
             </div>
         </div>
     """
-    section_content = ""
-    with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
-        section_content = f.read()
+    section_content = get_template("inicio.html")
+    #with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
+    #    section_content = f.read()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent

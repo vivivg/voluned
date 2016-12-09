@@ -79,13 +79,14 @@
     </nav>
 
     <header>
+    {% autoescape on %}
         {{ maincontent }}
     </header>
 
     {% for section in sections %}
         {{ section }}
     {% endfor %}
-
+    {% endautoescape %}
 
     <!-- jQuery -->
     <script src="/static/vendor/jquery/jquery.min.js"></script>
