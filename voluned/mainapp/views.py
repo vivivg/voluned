@@ -4,8 +4,8 @@ BASEPATH="/mainapp/"
 
 # Create your views here.
 def index(request):
-	maincontent = """
-		<div class="header-content" id="inicio">
+    maincontent = """
+        <div class="header-content" id="inicio">
             <div class="header-content-inner">
                 <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
@@ -13,10 +13,10 @@ def index(request):
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
-	"""
-	section_content = ""
-	with open ("./templates/mainapp/inicio.html") as f:
-		section_content = f.read()
+    """
+    section_content = ""
+    with open ("./templates/mainapp/inicio.html") as f:
+        section_content = f.read()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
