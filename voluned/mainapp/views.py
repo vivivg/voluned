@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from django.template.loader import get_template
+from django.template import Context, Template
 import os
 
 
 BASEPATH="/mainapp/"
-fsbasepath=os.path.dirname(os.path.abspath(__file__))
 
 # Create your views here.
 def index(request):
-    maincontent = """
+    maincontent = Template("""
         <div class="header-content" id="inicio">
             <div class="header-content-inner">
                 <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
@@ -17,8 +17,8 @@ def index(request):
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
-    """
-    section_content = get_template("mainapp/inicio.html")
+    """).render()
+    section_content = get_template("mainapp/inicio.html").render()
     #with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
     #    section_content = f.read()
     context = dict()
