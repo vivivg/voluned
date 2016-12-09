@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.http import HttpResponseRedirect
 
 urlpatterns = [
+    #url(r'^$', lambda r: HttpResponseRedirect('mainapp/')),
+    url(r'^mainapp/', include('mainapp.urls')),
+    url(r'^', include('mainapp.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
 ]
