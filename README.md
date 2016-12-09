@@ -8,7 +8,7 @@ URL                       TEMPLATE BASE         TEMPLATE INYECTADO
 /                         intex.html            inicio.html
 /#inicio                  intex.html            inicio.html
 /#ingreso                 intex.html            inicio.html
-/contactenos              intex.html            inicio.html
+/#contactenos             intex.html            inicio.html
 /mantenimientousuarios    index.html            user_mantenimiento.html
 /calendario               index.html            calendario.html
 /eventos                  index.html            eventos.html
