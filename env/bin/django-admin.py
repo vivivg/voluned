@@ -1,4 +1,4 @@
-#!/opt/voluntariado/env/bin/python3
+#!/opt/voluned/env/bin/python3.5
 from django.core import management
 
 if __name__ == "__main__":
