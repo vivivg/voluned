@@ -5,7 +5,7 @@ import os
 
 
 BASEPATH="/mainapp/"
-
+emptyContext = Context({})
 # Create your views here.
 def index(request):
     maincontent = Template("""
@@ -17,10 +17,8 @@ def index(request):
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
-    """).render()
+    """).render(emptyContext)
     section_content = get_template("mainapp/inicio.html").render()
-    #with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html")) as f:
-    #    section_content = f.read()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
