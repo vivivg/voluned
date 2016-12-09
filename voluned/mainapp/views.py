@@ -1,6 +1,9 @@
 from django.shortcuts import render
+import os
+
 
 BASEPATH="/mainapp/"
+fsbasepath=os.path.dirname(os.path.abspath(__file__))
 
 # Create your views here.
 def index(request):
@@ -15,7 +18,7 @@ def index(request):
         </div>
     """
     section_content = ""
-    with open ("./templates/mainapp/inicio.html") as f:
+    with open (os.path.join(fsbasepath, "templates/mainapp/inicio.html") as f:
         section_content = f.read()
     context = dict()
     context["BASEPATH"] = BASEPATH
