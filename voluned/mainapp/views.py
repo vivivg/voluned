@@ -27,7 +27,8 @@ def index(request):
                         </div>
                     </div>
                 </a>
-                <p><a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a></p>
+                <br />
+                <p><a href="#contactenos" class="btn btn-primary btn-xl page-scroll">Contactenos</a></p>
             </div>
         </div>
     """).render(emptyContext)
