@@ -12,16 +12,3 @@ urlpatterns = [
         url(r'^retrospectiva', views.retrospectiva, name='retrospectiva'),
         url(r'^registroestudiantes', views.registroestudiantes, name='registroestudiantes'),
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
