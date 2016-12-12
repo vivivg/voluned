@@ -12,9 +12,21 @@ def index(request):
     maincontent = Template("""
         <div class="header-content" id="inicio">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1 id="homeHeading">Tu puedes hacer el CAMBIO<br />EN LA VIDA<br />DE NUESTRO PLANETA<br /></h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <a href="/static/img/voluntariado/fullsize/voluhuerto.jpg" class="portfolio-box">
+                    <img src="/static/img/voluntariado/thumbnails/voluhuerto.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Voluntariado
+                            </div>
+                            <div class="project-name">
+                                en huertos
+                            </div>
+                        </div>
+                    </div>
+                </a>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
