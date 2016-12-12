@@ -42,78 +42,57 @@ def index(request):
 
 
 def mantenimientousuarios (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/user_mantenimiento.html").render()
+    maincontent = get_template("mainapp/user_mantenimiento.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def calendario (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/calendario.html").render()
+    maincontent = get_template("mainapp/calendario.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def eventos (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/eventos.html").render()
+    maincontent = get_template("mainapp/eventos.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def reporteasistencia (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/reporte_asistencia.html").render()
+    maincontent = get_template("mainapp/reporte_asistencia.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def viaticos (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/viaticos.html").render()
+    maincontent = get_template("mainapp/viaticos.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def retrospectiva (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/retrospectiva.html").render()
+    maincontent = get_template("mainapp/retrospectiva.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
 
 def registroestudiantes (request):
-    maincontent = Template("""
-    """).render(emptyContext)
-    section_content = get_template("mainapp/registro_estudiantes.html").render()
+    maincontent = get_template("mainapp/registro_estudiantes.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
     context["maincontent"] = maincontent
     context["sections"] = list ()
-    context["sections"].append(section_content)
     return render(request,'mainapp/index.html', context)
