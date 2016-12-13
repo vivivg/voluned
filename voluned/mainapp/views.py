@@ -50,7 +50,7 @@ def mantenimientousuarios (request):
     return render(request,'mainapp/index.html', context)
 
 def calendario (request):
-    customhead = """
+    customhead =  Template("""
             <link rel='stylesheet' href='static/css/fullcalendar.css' />
             <script src='static/js/moment.min.js'></script>
             <script src='static/js/fullcalendar.js'></script>
@@ -58,12 +58,12 @@ def calendario (request):
                 $('#calendar').fullCalendar({
                 })
             });</script>
-    """
+    """).render(emptyContext)
     maincontent = get_template("mainapp/calendario.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
-
-    context["maincontent"] = maincontent
+    context["CUSTOM_HEAD"] = BASEPATH
+    context["maincontent"] = customhead
     context["sections"] = list ()
     return render(request,'mainapp/index.html', context)
 
