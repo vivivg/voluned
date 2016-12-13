@@ -50,9 +50,15 @@ def mantenimientousuarios (request):
     return render(request,'mainapp/index.html', context)
 
 def calendario (request):
+    customhead = """
+            <link rel='stylesheet' href='static/css/fullcalendar.css' />
+            <script src='static/js/moment.min.js'></script>
+            <script src='static/js/fullcalendar.js'></script>
+    """
     maincontent = get_template("mainapp/calendario.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
+
     context["maincontent"] = maincontent
     context["sections"] = list ()
     return render(request,'mainapp/index.html', context)
