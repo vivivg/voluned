@@ -62,8 +62,8 @@ def calendario (request):
     maincontent = get_template("mainapp/calendario.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
-    context["CUSTOM_HEAD"] = BASEPATH
-    context["maincontent"] = customhead
+    context["CUSTOM_HEAD"] = customhead
+    context["maincontent"] = maincontent
     context["sections"] = list ()
     return render(request,'mainapp/index.html', context)
 
