@@ -50,10 +50,14 @@ def mantenimientousuarios (request):
     return render(request,'mainapp/index.html', context)
 
 def calendario (request):
-    maincontent = get_template("mainapp/calendario.html").render()
+    maincontent  = get_template("mainapp/calendario.html"    ).render()
+    customheader = get_template("mainapp/calendario_hdr.html").render()
+    customfooter = get_template("mainapp/calendario_ftr.html").render()
     context = dict()
     context["BASEPATH"] = BASEPATH
-    context["maincontent"] = maincontent
+    context["maincontent"]   = maincontent
+    context["CUSTOM_HEAD"]   = customheader
+    context["CUSTOM_FOOTER"] = customfooter
     context["sections"] = list ()
     return render(request,'mainapp/index.html', context)
 
