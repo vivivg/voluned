@@ -51,9 +51,9 @@ def mantenimientousuarios (request):
 
 def calendario (request):
     customhead =  Template("""
-            <link rel='stylesheet' href='static/css/fullcalendar.css' />
-            <script src='static/js/moment.min.js'></script>
-            <script src='static/js/fullcalendar.js'></script>
+            <link rel='stylesheet' href='/static/css/fullcalendar.css' />
+            <script src='/static/js/moment.min.js'></script>
+            <script src='/static/js/fullcalendar.js'></script>
             <script> $(document).ready(function() {            
                 $('#calendar').fullCalendar({
                 })
