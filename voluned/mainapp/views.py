@@ -54,6 +54,10 @@ def calendario (request):
             <link rel='stylesheet' href='static/css/fullcalendar.css' />
             <script src='static/js/moment.min.js'></script>
             <script src='static/js/fullcalendar.js'></script>
+            <script> $(document).ready(function() {            
+                $('#calendar').fullCalendar({
+                })
+            });</script>
     """
     maincontent = get_template("mainapp/calendario.html").render()
     context = dict()
