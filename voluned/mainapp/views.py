@@ -52,6 +52,7 @@ def mantenimientousuarios (request):
 def calendario (request):
     customhead =  Template("""
             <link rel='stylesheet' href='/static/css/fullcalendar.min.css' />
+            <script src="/static/vendor/jquery/jquery.min.js"></script>
             <script src='/static/js/moment.min.js'></script>
             <script src='/static/js/fullcalendar.min.js'></script>
             <script> $(document).ready(function() {            
